@@ -1,0 +1,17 @@
+Title: blogprint - a blueprint for blogs with kirby
+
+----
+
+Author: John Doe
+
+----
+
+Description: [blogprint](https://github.com/ausminternet/blogprint) is a theme for the awesome [kirby](http://getkirby.com/) CMS, to kickstart a blog. It is fully functional but without any styling - only semantic markup is provided.
+
+----
+
+Keywords: kirby,cms,blogprint,theme,blog
+
+----
+
+Copyright: © 2009-(date: Year)

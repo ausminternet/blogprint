@@ -1,0 +1,13 @@
+Title: Search
+
+----
+
+Noposts: Sorry, the search did not find any Posts.
+
+----
+
+Resulttitle: Searchresult for
+
+----
+
+Nosearch: There is nothing to search for…
