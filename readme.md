@@ -22,7 +22,7 @@
   - Catgeories
   - Authors
 
-If the archive is opened withput any arguments, it will list all articles seperated by year without the text.
+If the archive is opened without any arguments, it will list all articles seperated by year without the text.
 
 There is also a main menu which will show all visible first-level-pages and their visible children (except children for 'posts' - which is not visible on default) to add additional pages to the blog.
 
@@ -92,7 +92,7 @@ This snippet can list archives for dates, authors, tags and categories for all p
 
 ### getPostUrl( $post )
 
-Returns the wordpress-style-uri for a given post.
+Returns the wordpress-style-url for a given post.
 
 ### getAuthorName( $username )
 
