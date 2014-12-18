@@ -10,11 +10,14 @@ return function($site, $pages, $page) {
 
     switch ($location) {
       case 'site':
-        $posts = $site->search($query, array('words' => true))->visible();
+        $posts = $site->search($query, array('words' => true))
+                      ->visible();
         break;
 
       default:
-        $posts = $site->find('posts')->search($query, array('words' => true))->visible();
+        $posts = $site->find('posts')
+                      ->search($query, array('words' => true))
+                      ->visible();
         break;
     }
 

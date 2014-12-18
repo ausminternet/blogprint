@@ -3,7 +3,9 @@
 return function($site, $pages, $page, $data) {
 
   // get all posts
-  $posts = $site->find('posts')->children()->visible()->flip();
+  $posts = $site->find('posts')->children()
+                               ->visible()
+                               ->flip();
 
   $archiveTitle = null;
 
@@ -11,7 +13,9 @@ return function($site, $pages, $page, $data) {
   if(isset($data['author'])) {
     $author = urldecode($data['author']);
     $posts = $posts->filterBy('author', $author);
-    $archiveTitle = ' for author "' . getAuthorName($author) . ' (' . $author . ')"';
+    $archiveTitle = ' for author "'
+                  . getAuthorName($author)
+                  . ' (' . $author . ')"';
   }
 
   // filter by tag
@@ -71,7 +75,7 @@ return function($site, $pages, $page, $data) {
   $pagination = $posts->pagination();
 
   //pass all variables to the template
-  return compact('posts', 'archiveTitle', 'data', 'pagination', 'month', 'year');
+  return compact('posts', 'archiveTitle', 'data', 'pagination', 'year');
 
 };
 

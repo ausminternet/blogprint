@@ -54,7 +54,9 @@ if(!isset($category)) $category = false;
   <?php if($category &&  $post->category() != ""): ?>
     <div class="category">
       Category:
-      <a href="<?= $site->url() ?>/category/<?= urlencode($post->category()) ?>">
+      <a href="<?= $site->url()
+                 . '/category/'
+                 . urlencode($post->category()) ?>">
         <?= $post->category()->html() ?>
       </a>
     </div>
