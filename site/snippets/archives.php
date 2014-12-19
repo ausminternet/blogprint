@@ -6,8 +6,6 @@ if(!isset($categories)) $categories = false;
 if(!isset($class))      $class    = false;
 ?>
 
-<footer>
-
 <section id="archives" <?php if($class) echo 'class="' . $class . '"' ?>>
   <header>
     <h1>Archive options:</h1>
