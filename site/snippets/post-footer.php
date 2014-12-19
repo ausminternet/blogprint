@@ -4,9 +4,10 @@ if(!isset($author))   $author   = false;
 if(!isset($avatar))   $avatar   = false;
 if(!isset($tags))     $tags     = false;
 if(!isset($category)) $category = false;
+if(!isset($class))    $class    = false;
 ?>
 
-<footer>
+<footer <?php if($class) echo 'class="' . $class . '"' ?>>
 
   <?php if($date): ?>
     <div class="datetime">

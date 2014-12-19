@@ -3,9 +3,12 @@ if(!isset($dates))      $dates      = false;
 if(!isset($authors))    $authors    = false;
 if(!isset($tags))       $tags       = false;
 if(!isset($categories)) $categories = false;
+if(!isset($class))      $class    = false;
 ?>
 
-<section id="archives">
+<footer>
+
+<section id="archives" <?php if($class) echo 'class="' . $class . '"' ?>>
   <header>
     <h1>Archive options:</h1>
   </header>
