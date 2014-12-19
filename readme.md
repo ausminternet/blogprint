@@ -125,6 +125,7 @@ Archive for:
 
 ## TODO:
 
+- add feed
 - make translatable, when Bug https://github.com/getkirby/kirby/issues/156 is fixed
 - add disqus
 - make blogprint foundation-ready
