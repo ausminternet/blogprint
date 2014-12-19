@@ -1,8 +1,8 @@
 <?php if(!defined('KIRBY')) exit ?>
 
-title: Blog
+title: Posts
 pages:
-  template: blogpost
+  template: post
   num: date
   sort: flip
 files: false

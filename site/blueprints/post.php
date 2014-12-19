@@ -1,6 +1,6 @@
 <?php if(!defined('KIRBY')) exit ?>
 
-title: Blogpost
+title: Post
 pages:false
 files:
   sortable:true
