@@ -77,7 +77,7 @@ function getDatesArchive() {
   $site = site();
   $posts = $site->find('posts')->children()->visible();
 
-  if($posts) {
+  if($posts->count() > 0) {
     foreach ($posts as $post) {
       $year = $post->date('Y');
       $month = $post->date('F');
