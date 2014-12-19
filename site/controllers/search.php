@@ -4,31 +4,31 @@ return function($site, $pages, $page) {
 
   $query    = isset($_GET['q']) ? $_GET[ 'q'] : null;
   $location = isset($_GET['l']) ? $_GET[ 'l'] : null;
-  $posts    = null;
+  $results    = null;
 
   if($query){
 
     switch ($location) {
       case 'site':
-        $posts = $site->search($query, array('words' => true))
+        $results = $site->search($query, array('words' => true))
                       ->visible();
         break;
 
       default:
-        $posts = $site->find('posts')
+        $results = $site->find('posts')
                       ->search($query, array('words' => true))
                       ->visible();
         break;
     }
 
     // add pagination
-    $posts = $posts->paginate(c::get('pagination-search'));
-    $pagination = $posts->pagination();
+    $results = $results->paginate(c::get('pagination-search'));
+    $pagination = $results->pagination();
   }
 
 
   //pass all variables to the template
-  return compact('posts', 'query');
+  return compact('results', 'query');
 
 };
 
