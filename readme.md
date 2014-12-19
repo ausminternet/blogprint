@@ -50,11 +50,12 @@ This snippet can list all metadata like date, author, tags and categories for a 
 **Options:**
 
 - post      => $post
-- date      => true/false (default: true)
-- author    => true/false (default: false)
-- avatar    => true/false (default: false)
-- tags      => true/false (default: false)
-- category  => true/false (default: false)
+- date      => true/false   (default: true)
+- author    => true/false   (default: false)
+- avatar    => true/false   (default: false)
+- tags      => true/false   (default: false)
+- category  => true/false   (default: false)
+- class     => string/false (default: false)
 
 **Usage:**
 
@@ -63,7 +64,8 @@ This snippet can list all metadata like date, author, tags and categories for a 
                                    'author'     => true,
                                    'avatar'     => true,
                                    'tags'       => true,
-                                   'category'   => true)) ?>
+                                   'category'   => true,
+                                   'class'      => 'my-class')) ?>
 ```
 
 ### archives.php
@@ -74,10 +76,11 @@ This snippet can list archives for dates, authors, tags and categories for all p
 
 **Options:**
 
-- dates       => true/false (default: false)
-- authors     => true/false (default: false)
-- tags        => true/false (default: false)
-- categories  => true/false (default: false)
+- dates       => true/false   (default: false)
+- authors     => true/false   (default: false)
+- tags        => true/false   (default: false)
+- categories  => true/false   (default: false)
+- class       => string/false (default: false)
 
 **Usage:**
 
@@ -85,7 +88,8 @@ This snippet can list archives for dates, authors, tags and categories for all p
 <?php snippet('archives', array('dates'      => true,
                                 'authors'    => true,
                                 'tags'       => true,
-                                'categories' => true)) ?>
+                                'categories' => true,
+                                'class'      => 'my-class')) ?>
 ```
 
 ## helpful functions:
