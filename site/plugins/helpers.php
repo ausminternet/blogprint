@@ -80,7 +80,7 @@ function getDatesArchive() {
   if($posts->count() > 0) {
     foreach ($posts as $post) {
       $year = $post->date('Y');
-      $month = $post->date('F');
+      $month = $post->date('m');
       if(isset($dates[$year][$month])) {
         $dates[$year][$month] += 1;
       } else {

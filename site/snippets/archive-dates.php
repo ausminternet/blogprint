@@ -1,4 +1,8 @@
-<section id="dates">
+<?php
+if(!isset($class)) $class = false;
+?>
+
+<section id="dates" <?php if($class) echo 'class="' . $class . '"' ?>>
   <header>
     <h2>Dates:</h2>
   </header>
@@ -11,11 +15,12 @@
       </a>
       <ul>
       <?php foreach ($months as $month => $number): ?>
+        <?php $month = DateTime::createFromFormat('!m', $month) ?>
         <li>
           <a href="<?= $site->url()
                        . '/' . $year
-                       . '/' . date('m',strtotime($month)) ?>">
-            <?= $month ?> (<?= $number ?>)
+                       . '/' . $month->format('m') ?>">
+            <?= $month->format('F') ?> (<?= $number ?>)
           </a>
         </li>
       <?php endforeach ?>
