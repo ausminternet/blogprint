@@ -15,7 +15,7 @@
                                      'author'     => true,
                                      'avatar'     => true,
                                      'tags'       => true,
-                                     'categories' => true)) ?>
+                                     'category' => true)) ?>
 
   <?= getCoverImage($post) ?>
 
