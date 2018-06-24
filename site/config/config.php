@@ -29,6 +29,9 @@ c::set('pagination-posts', 10);
 c::set('pagination-archive', 30);
 c::set('pagination-search', 30);
 
+/* where's the blog? */
+c::set('posts', 'posts');
+
 /*
 
 ---------------------------------------
@@ -42,9 +45,6 @@ of the system, please check out http://getkirby.com/docs/advanced/options
 */
 
 c::set('markdown.extra', true);
-
-/* where's the blog? */
-c::set('posts', 'posts');
 c::set('debug', 'true');
 
 c::set('routes', array(
