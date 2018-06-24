@@ -6,7 +6,7 @@
         <a href="<?= $page->url() ?>">
           <?= $page->title()->html() ?>
         </a>
-        <?php if($page->hasVisibleChildren() && $page->uid() != 'posts'): ?>
+        <?php if($page->hasVisibleChildren() && $page->uid() != c::get('posts')): ?>
           <ul>
             <?php foreach($page->children()->visible() as $child): ?>
               <li <?php e($child->isActive(),' class="active"') ?>>

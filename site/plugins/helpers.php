@@ -75,7 +75,7 @@ function getCoverImage($post) {
  */
 function getDatesArchive() {
   $site = site();
-  $posts = $site->find('posts')->children()->visible();
+  $posts = $site->find(c::get('posts'))->children()->visible();
 
   if($posts->count() > 0) {
     foreach ($posts as $post) {
@@ -99,7 +99,7 @@ function getDatesArchive() {
  * @return array
  */
 function getTagsArchive() {
-  return tagcloud(page('posts'), array('field'   => 'tags',
+  return tagcloud(page(c::get('posts')), array('field'   => 'tags',
                                        'param'   => 'tag',
                                        'baseurl' => ''));
 }
@@ -112,7 +112,7 @@ function getTagsArchive() {
  * @return array
  */
 function getCategoriesArchive() {
-  return tagcloud(page('posts'), array('field'   => 'category',
+  return tagcloud(page(c::get('posts')), array('field'   => 'category',
                                        'param'   => 'category',
                                        'baseurl' => ''));
 }
@@ -125,7 +125,7 @@ function getCategoriesArchive() {
  * @return array
  */
 function getAuthorsArchive() {
-  return tagcloud(page('posts'), array('field'   => 'author',
+  return tagcloud(page(c::get('posts')), array('field'   => 'author',
                                        'param'   => 'author',
                                        'baseurl' => ''));
 }

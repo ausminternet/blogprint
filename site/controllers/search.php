@@ -15,7 +15,7 @@ return function($site, $pages, $page) {
         break;
 
       default:
-        $results = $site->find('posts')
+        $results = $site->find(c::get('posts'))
                       ->search($query, array('words' => true))
                       ->visible();
         break;
@@ -28,7 +28,7 @@ return function($site, $pages, $page) {
 
 
   //pass all variables to the template
-  return compact('results', 'query');
+  return compact('results', 'query', 'pagination');
 
 };
 

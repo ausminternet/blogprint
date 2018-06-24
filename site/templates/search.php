@@ -39,6 +39,8 @@
 
       <?php endforeach ?>
 
+      <?php snippet('nav-pagination') ?>
+
   <?php else: ?>
     <?= $page->noposts()->kirbytext() ?>
   <?php endif ?>

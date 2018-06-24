@@ -42,7 +42,9 @@ of the system, please check out http://getkirby.com/docs/advanced/options
 */
 
 c::set('markdown.extra', true);
-c::set('home', 'posts');
+
+/* where's the blog? */
+c::set('posts', 'posts');
 c::set('debug', 'true');
 
 c::set('routes', array(
@@ -78,7 +80,7 @@ c::set('routes', array(
     'pattern' => '(:num)/(:num)/(:num)/(:any)',
     'action'  => function($year, $month, $day, $uid) {
 
-      $page = page('posts/' . $uid);
+      $page = page(c::get('posts') . '/' . $uid);
       if(!$page){
         $page = site()->errorPage();
       } else {
