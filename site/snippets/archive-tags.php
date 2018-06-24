@@ -8,7 +8,7 @@
   <ul>
   <?php foreach($tags as $tag): ?>
     <li>
-      <a href="<?php echo $tag->url() ?>">
+      <a href="<?php echo $site->url() . $tag->url() ?>">
         <?php echo $tag->name() ?> (<?= $tag->results() ?>)
       </a>
     </li>

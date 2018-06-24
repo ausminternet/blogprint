@@ -10,7 +10,7 @@ if(!isset($class)) $class = false;
   <ul>
   <?php foreach ($dates as $year => $months): ?>
     <li>
-      <a href="/<?= $year ?>">
+      <a href="<?= $site->url() . '/' . $year ?>">
         <?= $year ?>
       </a>
       <ul>

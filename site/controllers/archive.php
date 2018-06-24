@@ -3,7 +3,7 @@
 return function($site, $pages, $page, $data) {
 
   // get all posts
-  $posts = $site->find('posts')->children()
+  $posts = $site->find(c::get('posts'))->children()
                                ->visible()
                                ->flip();
 
